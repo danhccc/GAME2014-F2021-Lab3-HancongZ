@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(backButton.transform.localPosition);
+        // Debug.Log(backButton.transform.localPosition);
     }
 
     // Update is called once per frame
