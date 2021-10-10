@@ -11,10 +11,12 @@ public class BulletBehaviour : MonoBehaviour
 
     public Bounds bulletBounds;
 
+    private BulletManager bulletManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletManager = GameObject.FindObjectOfType<BulletManager>();
     }
 
     // Update is called once per frame
@@ -34,7 +36,9 @@ public class BulletBehaviour : MonoBehaviour
         // None bullet pool
         if (transform.position.y < bulletBounds.max)
         {
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
+
+            bulletManager.ReturnBullet(this.gameObject);
         }
     }
 }
